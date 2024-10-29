@@ -1,0 +1,8 @@
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro $(find demo02_gazebo)/urdf/my_car.urdf.xacro"/>
+    <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find demo02_gazebo)/worlds/box_house.world"/>
+    </include> -->
+    <include file="$(find aws_robomaker_hospital_world)/launch/view_hospital.launch"/>
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_model" args="-urdf -model mycar -param robot_description -x 2.0 -y 10.0 -z 1.0"/>
+</launch>
