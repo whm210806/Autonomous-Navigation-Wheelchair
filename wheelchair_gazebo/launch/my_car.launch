@@ -1,6 +1,0 @@
-<launch>
-    <param name="robot_description" command="$(find xacro)/xacro $(find wheelchair_gazebo)/urdf/my_car.urdf.xacro"/>
-    <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
-    <!-- <node pkg="gazebo_ros" type="spawn_model" name="spawn_model" args="-urdf -model mycar -param robot_description"/> -->
-    <node pkg="gazebo_ros" type="spawn_model" name="spawn_model" args="-urdf -model mycar -param robot_description "/>
-</launch>
